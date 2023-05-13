@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Magium Path Map</title>
+		<style>
+		.kozep {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+		.chl {
+			width: 92%;
+			border-top: 1px dashed black;
+		}
+		.bookLine {
+			width: 100%;
+			border: 1px solid black;
+		}
+		body {
+			padding: 20px 40px;
+		}
+		.book {
+			margin: 10px;
+			font-family: Times New Roman;
+		}
+		.chapter {
+			margin: 16px;
+			font-family: Courier;
+		}
+		div.normal {
+			background-image: linear-gradient(rgba(102,162,220,0.5), rgba(0,0,0,0.3));
+			padding: 20px 10px;
+			text-align:center;
+			width: 150px;
+			height: 48px;
+			border: 2px solid black;
+			border-radius: 30px;
+		}
+		p.normal {
+			margin:0px;
+			font-size: 28px;
+			font-family: Verdana;
+			height: 30px;
+			margin-top: 9px;
+			margin-bottom: 9px;
+		}
+		span.saved {
+			border-bottom:3px solid yellow;
+			height: 20px;
+			font-size: 21px;
+			font-family: Optima;
+		}
+		span.savedImportant {
+			border-bottom:5px solid red;
+			height: 20px;
+			font-size: 21px;
+			font-family: Cambria;
+		}
+		td{
+			width: 150px;
+			padding-top: 2px;
+		}
+		.arrowLine {
+			height: 60px;
+			width: 4px;
+			background-image: linear-gradient(rgba(0,0,0,0.3), rgb(236, 245, 20));
+			margin: 0px 6px;
+		}
+		.revearseArrowLine {
+			height: 60px;
+			width: 4px;
+			background-image: linear-gradient(rgb(236, 245, 20),rgba(0,0,0,0.3));
+			margin: 0px 6px;
+		}
+		.revearseArrowHead {
+			height: 10px;
+			width: 10px;
+			border-bottom: 2px #AAA solid;
+			border-right: 2px #AAA solid;
+			transform: translate(-4px,-12px) rotate(45deg);
+			margin:0px 6px;
+		}
+		.arrowHeadImportant {
+			height: 10px;
+			width: 10px;
+			border-bottom: 2px rgb(255, 80, 20) solid;
+			border-right: 2px rgb(255, 80, 20) solid;
+			transform: translate(-4px,-12px) rotate(45deg);
+			margin:0px 6px;
+		}
+		#arrowHeadImportant {
+			height: 10px;
+			width: 10px;
+			border-bottom: 2px rgb(255, 80, 20) solid;
+			border-right: 2px rgb(255, 80, 20) solid;
+			transform: translate(-4px,-12px) rotate(45deg);
+			margin:0px 6px;
+		}
+		.arrowLineImportant {
+			height: 60px;
+			width: 4px;
+			background-image: linear-gradient(rgba(0,0,0,0.3), rgb(255, 80, 20));
+			margin: 0px 6px;
+		}
+		#arrowLineImportant {
+			height: 600px;
+			width: 4px;
+			background-image: linear-gradient(rgba(0,0,0,0.3), rgb(255, 80, 20));
+			margin: 0px 6px;
+		}
+		.revearseArrowLineImportant {
+			height: 60px;
+			width: 4px;
+			background-image: linear-gradient(rgb(255, 80, 20),rgba(0,0,0,0.3));
+			margin: 0px 6px;
+		}
+		.revearseArrowLineImportantSave {
+			height: 60px;
+			width: 4px;
+			background-image: linear-gradient(rgb(255, 80, 20),rgb(236, 245, 20));
+			margin: 0px 6px;
+		}
+		.revearseArrowHeadImportant {
+			height: 10px;
+			width: 10px;
+			border-bottom: 2px #AAA solid;
+			border-right: 2px #AAA solid;
+			transform: translate(-4px,-12px) rotate(45deg);
+			margin:0px 6px;
+		}
+		.arrowHead {
+			height: 10px;
+			width: 10px;
+			border-bottom: 2px rgb(236, 245, 20) solid;
+			border-right: 2px rgb(236, 245, 20) solid;
+			transform: translate(-4px,-12px) rotate(45deg);
+			margin:0px 6px;
+		}
+		.left {
+			transform: translateX(44px) rotate(40deg);
+		}
+		.right {
+			transform: translateX(-44px) rotate(-40deg);
+		}
+		.rightmore {
+			transform: translate(-126px, -10px) rotate(-64deg);
+		}
+		.revearseLeft {
+			transform: translateX(-44px) rotate(40deg);
+		}
+		.revearseRight {
+			transform: translateX(44px) rotate(-40deg);
+		}
+		div.saved {
+			background-image: linear-gradient(rgba(102,162,220,0.5), rgba(183,131,80,0.5));
+			padding: 20px 10px;
+			text-align:center;
+			width: 150px;
+			height: 48px;
+			border: 3px solid yellow;
+			border-radius: 30px;
+		}
+		.save{
+			margin:0px;
+			font-size: 28px;
+			font-family: Didot;
+			height: 30px;
+			margin-top: 9px;
+			margin-bottom: 9px;
+		}
+		.clipper {
+			white-space: nowrap;
+			overflow: hidden;
+			width:160px;
+		}
+		span.achivement {
+			background-image: linear-gradient(to right, rgba(60,240,50,0.76), rgba(60,230,120,0.8));
+			padding: 2px 10px;
+			border: 3px solid brown;
+			margin: 0px;
+			border-radius: 4px;
+		}
+		p.achivement {
+		font-family: Monaco;
+		}
+		.upbit {
+			transform: translateY(-7px);
+		}
+		.upmore {
+			transform: translateY(-17px);
+		}
+		.newCharacter {
+			width: 46px;
+			height: 21px;
+			border-bottom: 1px solid black;
+			border-left: 1px solid black;
+		}
+		.newCharacter2 {
+			width: 92px;
+			height: 21px;
+			border-bottom: 1px solid black;
+			border-left: 1px solid black;
+		}
+		.leftArrowHead{
+			height: 6px;
+			width: 6px;
+			border-bottom: 1pt black solid;
+			border-right: 1pt black solid;
+			transform: translate(42px,-4px) rotate(-45deg);
+			margin:0px;
+		}
+		.leftArrowHead2{
+			height: 6px;
+			width: 6px;
+			border-bottom: 1pt black solid;
+			border-right: 1pt black solid;
+			transform: translate(88px,-4px) rotate(-45deg);
+			margin:0px;
+		}
+		.newChar {
+		width: 40px;
+		}
+		.norm {
+		font-family: Brush Script;
+		}
+	    .death {
+		float: top;
+		width: 100%;
+		height: 1px;
+		border-top: 4px double blue;
+		transform: translate(5px, -60px);
+		}
+		.norma {
+		background-image: linear-gradient(rgba(102,162,220,0.5), rgba(0,0,0,0.3));
+		}
+		#revearseRight {
+			transform: translate(-164px, 90px) rotate(-40deg);
+		}
+		#left {
+			transform: translate(0px,0px) rotate(28deg);
+		}
+		</style>
+		<script>
+		</script>
+	</head>
+		<body>
+			<h1 style="text-align: center;font-family: Fantasy;" title="I love Magium">Magium Path Map</h1>
+			<p>Yellow means the choice is saved;<br/>Red means it will have bigger Implications;<br/>Grey means it is not saved;<br/>And the page with yellow border means it can have some parts of it different dependant on your choice</p>
+			<hr class="kozep bookLine"></hr>
+			<h2 class="book">Book 1<h2>
+			<hr class="kozep chl"></hr>
+			<h3 class="chapter" title="And so the great journey begins.">Chapter 1</h3>
+			<table class="kozep" style="transform: translate(-23px);">
+				<tr>
+					<td style="width: 46px;">
+						<img class="newChar" title="Barry boy" src="https://static.wikia.nocookie.net/magium/images/7/79/Barry-overview_edit.png/revision/latest/scale-to-width-down/1000?cb=20200728131843" alt="Barry"/><div class="upmore"><div class="newCharacter"></div><div class="leftArrowHead"></div></div>
+					</td>
+					<td>
+						<div class="kozep normal" title="Get to know the 'Avarage' Barry with 'no background'."><p class="normal">Intro1</p></div>
+					</td>
+				</tr>
+			</table>
+			<table class="kozep">
+				<tr>
+					<td>
+						<div class="left"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="arrowLine"></div><div class="arrowHead"></div></div>
+					</td>
+					<td>
+						<div class="right"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep" title="Makes 1st ¶ different on the next page. (Intro2)"><p><span class="saved">Exited</span></p></div>
+					</td>
+					<td>
+						<div class="kozep" title="Makes 1st ¶ different on the next page. (Intro2)"><p><span class="saved">Calm</span></p></div>
+					</td>
+					<td>
+						<div class="kozep" title="Makes 1st ¶ different on the next page. (Intro2) Poopy Pants"><p><span class="saved">Afraid</span></p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="revearseRight"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+					<div class="revearseLeft"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+				</tr>
+			</table>
+			<table class="kozep" style="transform: translateX(-48px);">
+				<tr>
+					<td style="width: 80px;">
+						<img class="newChar" style="float: left; transform: translateY(18px); margin-left:4px;" title="The Healer in Armor, Daren" src="https://static.wikia.nocookie.net/magium/images/d/dc/Daren_overview.png/revision/latest/scale-to-width-down/1000?cb=20200729083108" alt="Daren, Healer in Armor"/><img class="newChar" title="Dave, Cutter of Throats" src="https://i.redd.it/heizmm1zqw531.jpg" alt="Cutthroat Dave"/><div class="upmore"><div class="newCharacter2"></div><div class="leftArrowHead2"></div></div>
+					</td>
+					<td>
+						<div class="kozep saved" title="1st ¶ differs on Intro1 choice. Stumble uppon Daren and Dave."><p class="save">Intro2</p></div>
+					</td>
+				</tr>
+			</table>
+			<table class="kozep">
+				<tr>
+					<td>
+						<div class="left"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div>
+					</td>
+					<td>
+						<div class="right"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep" title="!Important: Dave does not see you; 1st 5 ¶ unique in Cutthroat Dave; Later referenced when Daren heals you."><p><span class="savedImportant">Stay silent</span></p></div>
+					</td>
+					<td>
+						<div class="kozep upbit" title="OMG you are super brave"><p class="achivement"><span class="achivement">Coward</span></p></div>
+						<div class="kozep upmore" title="!Important: Dave does see you; 1st 4 ¶ unique in Cutthroat Dave."><p><span class="savedImportant">Show myself</span></p></div>
+					</td>
+					<td>
+						<div class="kozep clipper" style="width: 170px;" title="!Important: Dave does not see you; 1st 3 ¶ unique in Cutthroat Dave."><p><span class="savedImportant">"I see no obligation to show myself"</span></p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="revearseRight"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="revearseArrowLineImportant"></div><div class="revearseArrowHeadImportant"></div></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLineImportant"></div><div class="revearseArrowHeadImportant"></div></div>
+					</td>
+					<td>
+					<div class="revearseLeft"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="revearseArrowLineImportant"></div><div class="revearseArrowHeadImportant"></div></div></div>
+					</td>
+				</tr>
+			</table>
+			<div class="kozep saved" style="width: 190px;" title="1st part differs on Intro2 choice. Davy ;)"><p class="save">Cutthroat Dave</p></div>
+			<table class="kozep">
+				<tr>
+					<td>
+						<div class="left"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div></div>
+					</td>
+					<td>
+						<div class="right"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-right: 30px;">
+						<div class="kozep clipper" style="width: 173px;" title="Big words from a small guy"><p class="norm">Imply that I'm the one who destroyed the city of Olmnar</p></div>
+					</td>
+					<td style="padding-left: 30px;">
+						<div class="kozep upbit" title="Off to a good start"><p class="achivement"><span class="achivement">Die</span></p></div>
+						<div class="kozep upmore" title="He's no child"><p class="norm clipper">Give him until the count of ten to retreat</p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div class="kozep death"></div>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-top: 10px;">
+						<div class="kozep normal" title="Being lucky because of Dave the Merciful."><p class="normal">Imply</p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-top: 10px;">
+						<div class="kozep saved" title="2 ¶ different whether you show you face to Dave or not. (Intro2)"><p class="save">Imply2</p></div>
+					</td>
+				</tr>
+			</table>
+			<table class="kozep" style="transform: translateX(32px);">
+				<tr>
+					<td>
+					</td>
+					<td style="padding-top: 10px;">
+						<div class="kozep" style="width:16px;height:61px;"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div>
+					</td>
+					<td>
+					</td>
+					<td style="padding-top: 10px;">
+						<div class="rightmore"><div class="kozep" style="width:16px;height:61px;transform: scale(1,3);"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<div class="kozep clipper" style="width: 180px;" title="!Important: Daren will know you are weak and help more."><p><span class="savedImportant">Tell him I'm actually an ordinary human</span></p></div>
+					</td>
+					<td>
+					</td>
+					<td>
+						<div class="kozep clipper" style="width: 178px;" title="!Important: Daren will think you are strong."><p><span class="savedImportant">Tell him my parents had a weird sense of humor</span></p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLineImportant"></div><div class="revearseArrowHeadImportant"></div></div>
+					</td>
+					<td>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLineImportantSave"></div><div class="arrowHead"></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<div class="kozep normal" title="'ordinary'"><p class="normal">Ordinary</p></div>
+					</td>
+					<td>
+					</td>
+					<td>
+						<table class="kozep" style="transform: translate(-23px);">
+							<tr>
+								<td style="width: 46px;">
+									<img class="newChar" title="Cool!.. or cold Kate" src="https://static.wikia.nocookie.net/magium/images/b/bd/Kate_overview.png/revision/latest/scale-to-width-down/321?cb=20200729113231" alt="Kate"/><div class="upmore"><div class="newCharacter"></div><div class="leftArrowHead"></div></div>
+								</td>
+								<td>
+									<div class="kozep saved" title="2 ¶ different if you are hurt, jus cuz (Intro2); funny 'parents'"><p class="save">Humor</p></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="left"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div>
+					</td>
+					<td>
+						<div class="right"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div></div>
+					</td>
+					<td>
+					<div id="left"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.05);"><div id="arrowLineImportant"></div><div id="arrowHeadImportant"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep upbit" title="I like a honest guy"><p class="achivement"><span class="achivement">Honesty</span></p></div>
+						<div class="kozep upmore" title="!Important: Daren also likes honest guys" style="width: 158px;"><p><span class="savedImportant">Tell him the truth</span></p></div>
+					</td>
+					<td>
+						<div class="kozep clipper" style="width: 184px;" title="!Important: Daren does not really like liars"><p><span class="savedImportant">Tell him I was forced into it</span></p></div>
+					</td>
+					<td>
+						<div class="kozep clipper" style="width: 177px;" title="!Important: Daren does not really like liars"><p><span class="savedImportant">Tell him I'm looking for a cure for my sick sister</span></p></div>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLineImportant"></div><div class="revearseArrowHeadImportant"></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLineImportant"></div><div class="revearseArrowHeadImportant"></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLineImportant"></div><div class="revearseArrowHeadImportant"></div></div>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep normal" title="Competition."><p class="normal">Truth</p></div>
+					</td>
+					<td>
+						<div class="kozep normal" title="He will 'help'."><p class="normal">Forced</p></div>
+					</td>
+					<td>
+						<div style="z-index: 1;position: relative;" title="He will 'help'."><div class="kozep normal" style="background-color:white;"><p class="normal">Sister</p></div></div>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="revearseRight"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="arrowLine"></div><div class="arrowHead"></div></div>
+					</td>
+					<td>
+					<div class="revearseLeft"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<table class="kozep" style="transform: translate(-23px);">
+							<tr>
+								<td style="width: 46px;">
+									<img class="newChar" title="Cool!.. or cold Kate" src="https://static.wikia.nocookie.net/magium/images/b/bd/Kate_overview.png/revision/latest/scale-to-width-down/321?cb=20200729113231" alt="Kate"/><div class="upmore"><div class="newCharacter"></div><div class="leftArrowHead"></div></div>
+								</td>
+								<td>
+									<div class=" kozep saved" title="2 ¶ different if you are hurt (Intro2); Close trusty moment :)"><p class="save">Weakness</p></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+					<div id="revearseRight"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+					<td>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<hr class="kozep chl"></hr>
+			<h3 class="chapter" title="And so the great journey begins.">Chapter 2</h3>
+			<div class="kozep normal" title="Get away Banshee!"><p class="normal">Intro</p></div>
+		</body>
+</html>
