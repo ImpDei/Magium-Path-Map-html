@@ -36,6 +36,10 @@
 			border: 2px solid black;
 			border-radius: 30px;
 		}
+		.normalChoice {
+			font-size: 18px;
+			font-family: Brush Script;
+		}
 		p.normal {
 			margin:0px;
 			font-size: 28px;
@@ -57,7 +61,7 @@
 			font-family: Cambria;
 		}
 		td{
-			width: 150px;
+			width: 180px;
 			padding-top: 2px;
 		}
 		.arrowLine {
@@ -88,11 +92,11 @@
 			transform: translate(-4px,-12px) rotate(45deg);
 			margin:0px 6px;
 		}
-		#arrowHeadImportant {
+		#revearseArrowHead {
 			height: 10px;
 			width: 10px;
-			border-bottom: 2px rgb(255, 80, 20) solid;
-			border-right: 2px rgb(255, 80, 20) solid;
+			border-bottom: 2px #AAA solid;
+			border-right: 2px #AAA solid;
 			transform: translate(-4px,-12px) rotate(45deg);
 			margin:0px 6px;
 		}
@@ -102,10 +106,10 @@
 			background-image: linear-gradient(rgba(0,0,0,0.3), rgb(255, 80, 20));
 			margin: 0px 6px;
 		}
-		#arrowLineImportant {
+		#revearseArrowLine {
 			height: 600px;
 			width: 4px;
-			background-image: linear-gradient(rgba(0,0,0,0.3), rgb(255, 80, 20));
+			background-image: linear-gradient(rgb(236, 245, 20), rgba(0,0,0,0.3));
 			margin: 0px 6px;
 		}
 		.revearseArrowLineImportant {
@@ -139,8 +143,32 @@
 		.left {
 			transform: translateX(44px) rotate(40deg);
 		}
+		.left2 {
+			transform: translateX(92px) rotate(63deg);
+		}
+		.leftBit {
+			transform: translateX(22px) rotate(20deg);
+		}
+		.revearseLeft2 {
+			transform: translateX(-92px) rotate(63deg);
+		}
+		.revearseLeftBit {
+			transform: translateX(-22px) rotate(20deg);
+		}
 		.right {
 			transform: translateX(-44px) rotate(-40deg);
+		}
+		.revearseRight2 {
+			transform: translateX(92px) rotate(-63deg);
+		}
+		.revearseRightBit {
+			transform: translateX(22px) rotate(-20deg);
+		}
+		.right2 {
+			transform: translateX(-92px) rotate(-63deg);
+		}
+		.rightBit {
+			transform: translateX(-22px) rotate(-20deg);
 		}
 		.rightmore {
 			transform: translate(-126px, -10px) rotate(-64deg);
@@ -183,6 +211,10 @@
 		p.achivement {
 		font-family: Monaco;
 		}
+		a {
+		text-decoration: none !important;
+		color:black;
+		}
 		.upbit {
 			transform: translateY(-7px);
 		}
@@ -220,15 +252,12 @@
 		.newChar {
 		width: 40px;
 		}
-		.norm {
-		font-family: Brush Script;
-		}
 	    .death {
 		float: top;
-		width: 100%;
+		width: 92%;
 		height: 1px;
 		border-top: 4px double blue;
-		transform: translate(5px, -60px);
+		transform: translate(12px, -60px);
 		}
 		.norma {
 		background-image: linear-gradient(rgba(102,162,220,0.5), rgba(0,0,0,0.3));
@@ -353,11 +382,11 @@
 				</tr>
 				<tr>
 					<td style="padding-right: 30px;">
-						<div class="kozep clipper" style="width: 173px;" title="Big words from a small guy"><p class="norm">Imply that I'm the one who destroyed the city of Olmnar</p></div>
+						<div class="kozep clipper" style="width: 160px;" title="Big words from a small guy"><p class="normalChoice">Imply that I'm the one who destroyed the city of Olmnar</p></div>
 					</td>
 					<td style="padding-left: 30px;">
 						<div class="kozep upbit" title="Off to a good start"><p class="achivement"><span class="achivement">Die</span></p></div>
-						<div class="kozep upmore" title="He's no child"><p class="norm clipper">Give him until the count of ten to retreat</p></div>
+						<div class="kozep upmore" style="width: 179px; overflow-x: clip; text-align:center;" title="He's no child"><p class="normalChoice clipper kozep" style="width:179px;">Give him until the count of ten to retreat</p></div>
 					</td>
 				</tr>
 				<tr>
@@ -384,7 +413,7 @@
 					</td>
 				</tr>
 			</table>
-			<table class="kozep" style="transform: translateX(32px);">
+			<table class="kozep" style="transform: translateX(14px);">
 				<tr>
 					<td>
 					</td>
@@ -401,12 +430,12 @@
 					<td>
 					</td>
 					<td>
-						<div class="kozep clipper" style="width: 180px;" title="!Important: Daren will know you are weak and help more."><p><span class="savedImportant">Tell him I'm actually an ordinary human</span></p></div>
+						<a name="imp2o" href="#bh"><div class="kozep clipper" style="width: 180px;" title="!Important: Daren will know you are weak and help more."><p><span class="savedImportant">Tell him I'm actually an ordinary human</span></p></div></a>
 					</td>
 					<td>
 					</td>
 					<td>
-						<div class="kozep clipper" style="width: 178px;" title="!Important: Daren will think you are strong."><p><span class="savedImportant">Tell him my parents had a weird sense of humor</span></p></div>
+					<a name="i" href="#bs"><div class="kozep clipper" style="width: 178px;" title="!Important: Daren will think you are strong."><p><span class="savedImportant">Tell him my parents had a weird sense of humor</span></p></div></a>
 					</td>
 				</tr>
 				<tr>
@@ -453,7 +482,7 @@
 						<div class="right"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLineImportant"></div><div class="arrowHeadImportant"></div></div></div>
 					</td>
 					<td>
-					<div id="left"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.05);"><div id="arrowLineImportant"></div><div id="arrowHeadImportant"></div></div></div>
+					<div id="left"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.05);"><div id="revearseArrowLine"></div><div id="revearseArrowHead"></div></div></div>
 					</td>
 				</tr>
 				<tr>
@@ -525,7 +554,7 @@
 						</table>
 					</td>
 					<td>
-					<div id="revearseRight"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					<div id="revearseRight"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div></div>
 					</td>
 					<td>
 					</td>
@@ -535,5 +564,288 @@
 			<hr class="kozep chl"></hr>
 			<h3 class="chapter" title="And so the great journey begins.">Chapter 2</h3>
 			<div class="kozep normal" title="Get away Banshee!"><p class="normal">Intro</p></div>
+			<table class="kozep" style="margin-bottom: 10px;">
+				<tr>
+					<td>
+						<div class="left2"><div class="kozep" style="width:16px;height:61px;transform: scale(1,2.3);"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="leftBit"><div class="kozep" style="width:16px;height:61px;"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="rightBit"><div class="kozep" style="width:16px;height:61px;"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="right2"><div class="kozep" style="width:16px;height:61px;transform: scale(1,2.3);"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep" title="Changes the conversation with Kate at (BlaBla)"><p><span class="saved">Her looks</span></p></div>
+					</td>
+					<td>
+						<div class="kozep upbit" title="Upsettingly smooth"><p class="achivement"><span class="achivement">talker</span></p></div>
+						<div class="kozep upmore" title="Changes the conversation with Kate at (BlaBla)" style="width: 170px; overflow-x: clip;"><p><span class="saved clipper">Deciding which one should make a pass at her</span></p></div>
+					</td>
+					<td>
+						<div class="kozep" title="Changes the conversation with Kate at (BlaBla)" style="width: 146px; overflow-x: clip;"><p><span class="saved clipper">Just finishing our discussion from earlier</span></p></div>
+					</td>
+					<td>
+						<div class="kozep" title="Changes the conversation with Kate at (BlaBla)" style="width: 170px; overflow-x: clip;"><p><span class="saved clipper">Discussing whether she is a banshee or not</span></p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep normal" title="Unfazed :I"><p class="normal">Looks</p></div>
+					</td>
+					<td>
+						<div class="kozep normal" title="Paper always wins"><p class="normal">Pass</p></div>
+					</td>
+					<td>
+						<div class="kozep normal" title="Obviously"><p class="normal">Earlier</p></div>
+					</td>
+					<td>
+						<div class="kozep normal" title="Is that liquide ice in her eyes?"><p class="normal">Banshee</p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="revearseRight2"><div class="kozep" style="width:16px;height:61px;transform: scale(1,2.3);"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="revearseRightBit"><div class="kozep" style="width:16px;height:61px;"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="revearseLeftBit"><div class="kozep" style="width:16px;height:61px;"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="revearseLeft2"><div class="kozep" style="width:16px;height:61px;transform: scale(1,2.3);"><div class="arrowLine"></div><div class="arrowHead"></div></div></div>
+					</td>
+				</tr>
+			</table>
+			<div class="kozep saved" title="If you told Daren, he will defend your humanity against Kate."><p class="save">Escort</p></div>
+			<table class="kozep">
+				<tr>
+					<td>
+						<div class="left"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div class="right"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep clipper" style="width: 154px;" title="You just said you destroyed Olmnar"><p class="normalChoice">Ask her what she has against me</p></div>
+					</td>
+					<td>
+						<div class="kozep clipper" style="width: 164px;" title="Cuz she's Kate"><p class="normalChoice">Ask why the two of us should trust her</p></div>
+					</td>
+					<td>
+						<div class="kozep clipper" style="width: 168px;" title="Cuz he's DAREN"><p class="normalChoice">Ask why she's so quick to trust Daren and not me</p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep normal" title="You deserve better, anyway."><p class="normal">Against</p></div>
+					</td>
+					<td>
+						<div class="kozep normal" title="You made her stutter."><p class="normal">Trust</p></div>
+					</td>
+					<td>
+						<div class="kozep normal" title="Reputation."><p class="normal">Quick</p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="revearseRight"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="revearseArrowLine norma"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+					<td>
+						<div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+					<div class="revearseLeft"><div class="kozep" style="width:16px;height:61px;transform: scale(1,1.4);"><div class="revearseArrowLine norma"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+				</tr>
+			</table>
+			<table class="kozep" style="transform: translate(-23px);">
+				<tr>
+					<td style="width: 46px;">
+						<img class="newChar" title="I will make you super strong" src="https://i.redd.it/ektd7cq12ifz.jpg" alt="Stat device"/><div class="upmore"><div class="newCharacter"></div><div class="leftArrowHead"></div></div>
+					</td>
+					<td>
+						<div class="kozep normal" title="Stat device is your best device."><p class="normal">Stats</p></div>
+					</td>
+				</tr>
+			</table>
+			<div class="kozep" style="width:16px;height:61px; margin-bottom: 10px;"><div class="arrowLine"></div><div class="arrowHead"></div></div>
+			<div class="kozep saved" title="Stat device is your best device."><p class="save">Fallen-trees</p></div>
+			<table class="kozep">
+				<tr>
+					<td>
+						<a href="#imp2o" name="bh"><div title="If you chose to tell Daren that you are a human he will save you. (Ordinary in Imply2)" class="leftBit"><div class="kozep" style="width:16px;height:61px; border: 2px dotted red;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div></div></a>
+					</td>
+					<td>
+						<a href="#i" name="bs"><div title="You're a stillwater ain't ya? (Humor in Imply2)" class="rightBit"><div class="kozep" style="width:16px;height:61px; border: 2px dotted red;"><div class="arrowLine"></div><div class="arrowHead"></div></div></div></a>
+					</td>
+				</tr>
+				<tr height="152px">
+					<td>
+						<div class="kozep normal" title="Daren the heroic" style="width:197px;"><p class="normal">Battle-human</p></div>
+					</td>
+					<td style="width:230px;">
+						<div class="upmore">
+							<div title="liar dier" style="width:50px;height:18px;color:red;border-bottom: 4px blue double;margin-top:23px;float:left;"><p style="margin: 0px;" class="normalChoice">no stat</p></div>
+							<div title="own fortune teller" style="width:46px;height:18px;color:green;float:left;margin-left:4px;margin-top:25px;"><p style="margin:0px;">Prem 1</p></div>
+							<div title="dodge the kick too :(" style="width:56px;height:18px;color:green;float:left;margin-left:4px;margin-top:25px;"><p style="margin:0px;">Reflex 1</p></div>
+							<table style="float:left; width:58px;margin-bottom:2px;">
+								<tr>
+									<td>
+									<div class="kozep upbit" title="Why bother dodging"><p class="achivement" style="margin:0px;"><span class="achivement">Nails</span></p></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<a name="tw" href="#tbeehas"><div title="suprise mother fkr; you can't be tough twice (avoid2 tough3 is locked)" style="width:54px;height:18px;color:green;float:left;margin-left:4px;margin-top:2px;border:1px solid yellow;"><p style="margin:0px;">Tough 3</p></div></a>
+									</td>
+								</tr>
+							</table>
+							<div class="kozep saved" title="Different depending on your stats" style="width:185px;clear:both;"><p class="save">Battle-stillwater</p></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div title="" class="revearseRightBit"><div class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+					<td>
+						<div title="" class="revearseLeftBit"><div class="kozep" style="width:16px;height:61px;"><div class="revearseArrowLine"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+				</tr>
+			</table>
+			<div class="kozep normal" title="" style="width:185px;margin-top:6px;"><p class="save">Battle-begins</p></div>
+			<table class="kozep">
+				<tr>
+					<td>
+						<div title="" class="left"><div class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+					<td>
+						<div title="" class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div title="" class="right"><div class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep clipper" title="" style="width:192px;"><p class="normalChoice">Hide behind Daren and let him handle them both</p></div>
+					</td>
+					<td>
+						<div class="kozep clipper" title="" style="width:176px;"><p class="normalChoice">Draw the younger mage away from Daren and focus on avoiding his attacks</p></div>
+					</td>
+					<td>
+						<div class="kozep clipper" title="" style="width:173px;"><p class="normalChoice">Fight the younger mage myself</p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div title="" class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div title="" class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div title="" class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="kozep normal" title=""><p class="normal">Hide</p></div>
+					</td>
+					<td>
+						<div class="kozep normal" title=""><p class="normal">Avoid</p></div>
+					</td>
+					<td>
+						<div class="kozep normal" title=""><p class="normal">Fight</p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div title="" class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div title="" class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div title="" class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+				</tr>
+				<tr height="152px">
+					<td>
+						<div class="kozep normal" title=""><p class="normal">Hide2</p></div>
+					</td>
+					<td style="width:240px;">
+						<div class="upmore">
+							<div title="liar dier" style="width:50px;height:18px;color:red;border-bottom: 4px blue double;margin-top:23px;float:left;"><p style="margin: 0px;" class="normalChoice">no stat</p></div>
+							<div title="dodge the kick too :(" style="width:56px;height:18px;color:green;float:left;margin-left:4px;margin-top:25px;"><p style="margin:0px;">Reflex 1</p></div>
+							<div title="own fortune teller" style="width:54px;height:18px;color:green;float:left;margin-left:4px;margin-top:25px;"><p style="margin:0px;">Speed 1</p></div>
+							<table style="float:left; width:58px;margin-bottom:2px;">
+								<tr>
+									<td>
+									<div class="kozep upbit" title="Why bother dodging"><p class="achivement" style="margin:0px;"><span class="achivement">Nails</span></p></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<a name="tbeehas" href="#tw"><div title="suprise mother fkr; Can't get if you already were a tough guy" style="width:54px;height:18px;color:green;float:left;margin-left:4px;margin-top:2px;border:1px solid yellow;"><p style="margin:0px;">Tough 3</p></div></a>
+									</td>
+								</tr>
+							</table>
+							<div class="kozep saved" title="Different depending on your stats" style="width:185px;clear:both;"><p class="save">Avoid2</p></div>
+						</div>
+					</td>
+					<td>
+						<div class="kozep saved" title=""><p class="save">Fight2</p></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div title="" class="revearseRight"><div class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+					<td>
+						<div title="" class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div>
+					</td>
+					<td>
+						<div title="" class="revearseLeft"><div class="kozep" style="width:16px;height:61px;"><div class="arrowLine norma"></div><div class="revearseArrowHead"></div></div></div>
+					</td>
+				</tr>
+			</table>
 		</body>
 </html>
